@@ -3,20 +3,46 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<!-- ul stands for unordered list-->
+<!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
+<!-- li HTML element is used to represent an item in a list-->
 <style>
-    ul {
+    body {  
+        background-color: rgb(196, 207, 242);
+    }
+    ul { 
       list-style-type: none;
       margin: 0;
       padding: 0;
+      background-color: #fbfbfb;
+      border: 1px solid #e7e7e7;
+      position: fixed;
+      top: 0;
+      width: 100%;
+
     }
 
     li {
-        display: inline
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: rgb(196, 207, 242);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px black;
+    }
+
+    li a:hover {
+        background-color: #111;
     }
 </style>
 <body>
 
-<div id="navbar">
+<div id="navbar", style="padding:20px;margin-top:30px;">
     <!-- <h2> Anqi's Website <a href="">Home</a></h2>   <h2> <a href="signup">Contact Me!</a></h2>    <h2> <a href="resume">Resume</a></h2> -->
    
     <ul>
@@ -28,6 +54,6 @@
 </div>
 
 {% block content %}{% endblock %}
-
+<>
 </body>
 </html>
