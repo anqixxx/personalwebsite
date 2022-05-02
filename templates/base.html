@@ -33,12 +33,66 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        text-shadow: 1px 1px 5px black;
+
     }
 
     li a:hover {
         background-color: #111;
     }
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        color: rgb(196, 207, 242);
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a black background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+         background-color: #111;
+    }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(196, 207, 242);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 <body>
 
@@ -46,14 +100,24 @@
     <!-- <h2> Anqi's Website <a href="">Home</a></h2>   <h2> <a href="signup">Contact Me!</a></h2>    <h2> <a href="resume">Resume</a></h2> -->
    
     <ul>
-        <li><a href="default">Home</a></li>
-        <li><a href="signup">Contact Me!</a></li>
-        <li><a href="resume">Resume</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="signup">CONTACT</a></li>
+        <div class="dropdown">
+            <li><button class="dropbtn">RESUME 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="technicalprojects">TECHNICAL EXPERIENCE</a>
+              <a href="technicalprojects">TECHNICAL PROJECTS </a>
+              <a href="education">EDUCATION</a>
+              <a href="nontechnicalexperience">NON-TECHNICAL EXPERIENCE</a>
+              <a href="skills">SKILLS</a>
+            </div> </li>
+        <li><a href="about">ABOUT</a></li>
       </ul>
 </div>
 
 {% block content %}{% endblock %}
-<>
+
 </body>
 </html>

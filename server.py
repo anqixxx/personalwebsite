@@ -7,17 +7,37 @@ app.config['SECRET_KEY'] = 'penguin'
 # routing some funtion to our home function, which turns hello world
 @app.route('/')
 def home():
-    return 'This is My Website'
+    return render_template('default.html')
 
 # specifiying the path, the actual route the server should go to, 
 # and what is will return at that specific point
 @app.route('/about')
 def about():
-    return 'The About Page'
+    return render_template('about.html')
 
 @app.route('/resume')
 def resume():
-    return 'The Resume Page'
+    return render_template('resume.html')
+
+@app.route('/technicalexperience')
+def technicalexperience():
+    return render_template('technicalexperience.html')
+
+@app.route('/technicalprojects')
+def technicalprojects():
+    return render_template('technicalprojects.html')
+
+@app.route('/nontechnicalexperience')
+def nontechnicalexperience():
+    return render_template('nontechnicalexperience.html')
+
+@app.route('/education')
+def education():
+    return render_template('education.html')
+
+@app.route('/skills')
+def skills():
+    return render_template('skills.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
