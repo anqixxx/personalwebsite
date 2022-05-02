@@ -1,27 +1,135 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+</head>
 
+<!-- ul stands for unordered list-->
+<!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
+<!-- li HTML element is used to represent an item in a list-->
 <style>
     body {  
-        color: black;
+        background-color: rgb(196, 207, 242);
+    }
+    ul { 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #fbfbfb;
+      border: 1px solid #e7e7e7;
+      position: fixed;
+      top: 0;
+      width: 100%;
+
     }
 
-    div.a {
-      text-align: center;
+    li {
+        float: left;
     }
 
-    div.b {
-      text-align: center;
+    li a {
+        display: block;
+        color: rgb(196, 207, 242);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
     }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        color: rgb(196, 207, 242);
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a black background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+         background-color: #111;
+    }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(196, 207, 242);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
-<p>test</p>
-<body>
- {% block content %} {% endblock %}
 
- <h2> block 1 </h2>
-<p> blocky block</p>
+
+ <!-- Starts Body > -->
+<body>
+<div id="navbar", style="padding:20px;margin-top:30px;">   
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="signup">CONTACT</a></li>
+        <div class="dropdown">
+            <li><button class="dropbtn">RESUME 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="technicalexperience">TECHNICAL EXPERIENCE</a>
+              <a href="technicalprojects">TECHNICAL PROJECTS </a>
+              <a href="education">EDUCATION</a>
+              <a href="nontechnicalexperience">NON-TECHNICAL EXPERIENCE</a>
+              <a href="skills">SKILLS</a>
+            </div> </li>
+        <li><a href="about">ABOUT</a></li>
+      </ul>
+</div>
+<p> Feel free to navigate through the links, or just download my resume! </p>
+
+<iframe
+    src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
+    frameBorder="0"
+    scrolling="auto"
+    height="500"
+    width="800"
+></iframe>
+
+<a href="/Documents/Employment/Resumes/Anqi%20Xu%20New.pdf" download>
+    <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+</a>
+
+{% block content %}{% endblock %}
 
 </body>
-<h2> block 2 </h2>
-<p> blocky block 2 </p>
-
 </html>
