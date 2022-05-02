@@ -2,6 +2,7 @@
 <html lang="en">
     <meta charset="UTF-8">
 </head>
+<meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" />
 
 <!-- ul stands for unordered list-->
 <!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
@@ -19,7 +20,6 @@
       position: fixed;
       top: 0;
       width: 100%;
-
     }
 
     li {
@@ -62,35 +62,44 @@
          background-color: #111;
     }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+    }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: rgb(196, 207, 242);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: rgb(196, 207, 242);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: black;
-}
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: black;
+    }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #resumepdf{
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      color: rgb(157, 180, 255);
+      display: flex;
+      justify-content: center;
+    }
 
 </style>
 
@@ -111,12 +120,14 @@
               <a href="education">EDUCATION</a>
               <a href="nontechnicalexperience">NON-TECHNICAL EXPERIENCE</a>
               <a href="skills">SKILLS</a>
+              <a href="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf">DOWNLOAD RESUME</a>
             </div> </li>
         <li><a href="about">ABOUT</a></li>
       </ul>
 </div>
-<p> Feel free to navigate through the links, or just download my resume! </p>
 
+<div id="resumepdf", style="padding:20px;margin-bottom:30px;">   
+<h1 style="color: rgb(139, 146, 169)">Anqi's Resume!</h1>
 <iframe
     src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
     frameBorder="0"
@@ -124,9 +135,16 @@
     height="500"
     width="800"
 ></iframe>
+</div>
+
+<p> Feel free to navigate through the links, or just download my resume! </p>
 
 <a href="/Documents/Employment/Resumes/Anqi%20Xu%20New.pdf" download>
     <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+</a>
+
+<a href="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf" download>
+    <src=""https://www.docdroid.net/6yaurym/anqi-xu-new-pdf" alt="W3Schools">
 </a>
 
 {% block content %}{% endblock %}
