@@ -9,6 +9,7 @@
 <style>
     body {  
         background-color: rgb(196, 207, 242);
+        text-align: center;
     }
     ul { 
       list-style-type: none;
@@ -60,6 +61,18 @@
     /* Add a black background color to navbar links on hover */
     .navbar a:hover, .dropdown:hover .dropbtn {
          background-color: #111;
+    }
+
+    #navbar{
+        z-index: 10000;
+        position: fixed;
+    }
+
+    span.block {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
     }
 
 /* Dropdown content (hidden by default) */
@@ -115,6 +128,8 @@
         <li><a href="about">ABOUT</a></li>
       </ul>
 </div>
+
+<span class="block"></span>
 
 {% block content %}{% endblock %}
 

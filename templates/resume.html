@@ -2,7 +2,7 @@
 <html lang="en">
     <meta charset="UTF-8">
 </head>
-<meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" />
+<!-- <meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" /> -->
 
 <!-- ul stands for unordered list-->
 <!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
@@ -10,7 +10,9 @@
 <style>
     body {  
         background-color: rgb(196, 207, 242);
+        color: grey;
         align-items: center;
+        text-align: center;
         justify-content: center;
     }
     ul { 
@@ -95,17 +97,30 @@
     }
 
     #resumepdf{
-      position: fixed;
-      bottom: 0;
-      background-color: white;
-      color:rgb(139, 146, 169);
       display: flex;
+      position: relative;
+      bottom:0;
       align-items: center;
       justify-content: center;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fbfbfb;
+    }
+    
+    #navbar{
+        z-index: 10000;
+        position: fixed;
+    }
+
+    span.block {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
     }
 
 </style>
-
 
  <!-- Starts Body > -->
 <body>
@@ -129,19 +144,19 @@
       </ul>
 </div>
 
-<div id="resumepdf", style="padding:10px;margin-bottom:10px;">   
-<!-- <iframe
-    src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
-    frameBorder="0"
-    scrolling="auto"
-    height="500"
-    width="800"
-></iframe> -->
-</div>
-
-<p> Feel free to navigate through the links, or just download my resume! </p>
+<span class="block"></span>
 
 {% block content %}{% endblock %}
 
+<p> Feel free to navigate through the links, or just download my resume! </p>
+<div id="resumepdf", style="padding:10px;margin-bottom:10px;">   
+    <iframe
+        src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
+        frameBorder="0"
+        scrolling="auto"
+        height="500"
+        width="800"
+    ></iframe> 
+    </div>
 </body>
 </html>
