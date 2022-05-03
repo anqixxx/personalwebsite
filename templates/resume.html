@@ -10,6 +10,8 @@
 <style>
     body {  
         background-color: rgb(196, 207, 242);
+        align-items: center;
+        justify-content: center;
     }
     ul { 
       list-style-type: none;
@@ -93,11 +95,12 @@
     }
 
     #resumepdf{
-      text-align: center;
       position: fixed;
       bottom: 0;
-      color: rgb(157, 180, 255);
+      background-color: white;
+      color:rgb(139, 146, 169);
       display: flex;
+      align-items: center;
       justify-content: center;
     }
 
@@ -120,32 +123,23 @@
               <a href="education">EDUCATION</a>
               <a href="nontechnicalexperience">NON-TECHNICAL EXPERIENCE</a>
               <a href="skills">SKILLS</a>
-              <a href="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf">DOWNLOAD RESUME</a>
+             <!-- <a href="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf">DOWNLOAD RESUME</a> -->
             </div> </li>
         <li><a href="about">ABOUT</a></li>
       </ul>
 </div>
 
-<div id="resumepdf", style="padding:20px;margin-bottom:30px;">   
-<h1 style="color: rgb(139, 146, 169)">Anqi's Resume!</h1>
-<iframe
+<div id="resumepdf", style="padding:10px;margin-bottom:10px;">   
+<!-- <iframe
     src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
     frameBorder="0"
     scrolling="auto"
     height="500"
     width="800"
-></iframe>
+></iframe> -->
 </div>
 
 <p> Feel free to navigate through the links, or just download my resume! </p>
-
-<a href="/Documents/Employment/Resumes/Anqi%20Xu%20New.pdf" download>
-    <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
-</a>
-
-<a href="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf" download>
-    <src=""https://www.docdroid.net/6yaurym/anqi-xu-new-pdf" alt="W3Schools">
-</a>
 
 {% block content %}{% endblock %}
 

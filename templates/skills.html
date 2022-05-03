@@ -1,6 +1,103 @@
 {% extends "resume.html" %}
 
 {% block content %}
+<style>
+    div.programming {
+      text-align: center;
+      background-color: white;
+      animation-name: movement;
+      animation-duration: 4s;
+      position: relative;
+      left: 50%;
+      padding: 100px; 
+      width: 500px;
+      margin: 25px;
+      transform: translateX(-50%);
+    }
+
+    div.electrical {
+      text-align: center;
+      background-color: white;
+      animation-name: movement;
+      animation-duration: 4s;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 100px; 
+        width: 550px;
+        margin: 25px;
+    }
+
+    div.mechanical {
+      text-align: center;
+      background-color: white;
+      animation-duration: 4s;
+      animation-name: movement;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 100px; 
+        width: 600px;
+        margin: 25px;
+    }
+
+    div.languages {
+      text-align: center;
+      background-color: white;
+      animation-duration: 4s;
+      animation-name: movement;
+      position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 100px; 
+        width: 650px;
+        margin: 25px;
+    }
+
+    @keyframes colourchange {
+        from {background-color: black;}
+        to {background-color: white;}
+    }
+
+    @keyframes movement {
+      0%   {background-color:black; left:5%; top:0;}
+      25%  {background-color:rgb(196, 207, 242); left:95%; top:0;}
+      50%  {background-color:grey; left:95%; top:1000px;}
+      75%  {background-color:rgb(196, 207, 242); left:5%; top:1000px;}
+      100% {background-color:white; left: 5%; top:0px;}
+}
+
+</style>
 <title>Skills</title>
 <h2> Skills </h2>
+
+<div class="programming">
+    <h3> Programming </h3>
+    <p>
+        C programming, Java, Arduino, Git, Intellj, Visual Studio, Matlab, Excel
+    </p>
+</div>
+
+<div class="electrical">
+    <h3> Electrical </h3>
+    <p>
+        Altium, Soldering, Multimeters, Oscilloscopes
+    </p>
+</div>
+
+<div class="mechanical">
+    <h3> Mechanical </h3>
+    <p>
+        Solidworks, Prototyping, Engineering Drawings
+    </p>
+</div>
+
+<div class="languages">
+    <h3> Languages </h3>
+    <p>
+        English (native), Mandarin (fluent)
+    </p>    
+</div>
+
+
 {% endblock %}
