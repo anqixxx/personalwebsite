@@ -1,8 +1,88 @@
 {% extends "resume.html" %}
 
 {% block content %}
-<title>Technical Projects</title>
+<style>
+    div.emailana {
+        color: white;
+        padding: 20px; 
+        margin: 25px;
+    }
 
-<h2> Technical Projects </h2>
+    div.textana {
+        color: white;
+        padding: 20px; 
+        margin: 25px;
+    }
+
+    div.claw {
+        color: white;
+        padding: 20px; 
+        margin: 25px;
+    }
+
+    div.chair {
+        color: white;
+        padding: 20px; 
+        margin: 25px;
+    }
+
+    p.italic {
+      font-style: italic;
+    }
+    h3.bold{
+        font-style: bold;
+    }
+
+</style>
+
+<title>Technical Projects</title>
+<h2> TECHNICAL PROJECTS </h2>
+
+<div class="emailana">
+    <h3 class="bold"> Email Analyzer </h3>
+    <p class="italic">Java</p>
+    <p>
+        Used graph theory to collect advanced metrics regarding interactions, whilst using metrics to filter such interactions through Java programming 
+    <br>
+        Parsed through a text file to create directed and undirected graphs 
+    <br>
+        Generated reports on certain users and time frames, as well as compared users based on different types of activity 
+    </p>
+</div>
+
+<div class="textana">
+    <h3 class="bold"> Text Document Analysis </h3>
+    <p  class="italic">Java</p>
+    <p>
+        Created a document analyzer using Java that parsed through websites or text files to determine sentence and word level metrics, and similarity 
+    <br>
+        Developed algorithms to perform linguistic analysis using the Google Sentiment Analysis API 
+    <br>
+        Compared documents and partitioned them accordingly using similarity metrics ● Tested application using JUnit and regression testing 
+    </p>
+</div>
+
+<div class="claw">
+    <h3 class="bold"> Arduino Robotic Claw </h3>
+    <p class="italic">C</p>
+    <p>
+        Mechanically developed an autonomous claw that senses and picks up objects of various shapes and sizes, ranging from an almond to a full pop can
+    <br>
+        Led development of firmware for functionality of mechanical components of claw using C and the Arduino IDE 
+    <br>
+        Prototyped and tested various mechanical iterations to optimize design and precision 
+    </p>
+</div>
+
+<div class="chair">
+    <h3 class="bold"> Cardboard Chair </h3>
+    <p class="italic">Mechanical Design</p>
+    <p> Created a full-sized chair purely out of cardboard that held over 300 pounds without breaking 
+        <br>
+        Used interlocking supports to maximize strength and prioritized the user through back and arm supports for ergonomic strength 
+        <br>
+        Placed first out of 6 teams by using rapid full-scale prototyping with cardboard to analyze areas of weakness 
+    </p>
+</div>
 
 {% endblock %}
