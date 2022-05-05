@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/8ace5b7d41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
 </head>
 <!-- <meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" /> -->
 
@@ -14,7 +16,30 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 16px;
     }
+
+    h1 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 46px;  
+    }
+
+    h2 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 46px;  
+    }
+
+    h3 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 20px;
+        line-height: 1.8;  
+    }
+
+    p.big {
+          line-height: 1.8;
+    }
+
     ul { 
       list-style-type: none;
       margin: 0;
@@ -40,7 +65,8 @@
     }
 
     li a:hover {
-        background-color: #111;
+        background-color: rgb(9, 20, 45);
+        color: white;
     }
 
     /* The dropdown container */
@@ -63,7 +89,8 @@
 
     /* Add a black background color to navbar links on hover */
     .navbar a:hover, .dropdown:hover .dropbtn {
-         background-color: #111;
+        background-color: rgb(9, 20, 45);
+        color: white;
     }
 
     /* Dropdown content (hidden by default) */
@@ -88,7 +115,8 @@
 
     /* Add a grey background color to dropdown links on hover */
     .dropdown-content a:hover {
-        background-color: black;
+        background-color: rgb(9, 20, 45);
+        color: white;
     }
 
     /* Show the dropdown menu on hover */
@@ -120,6 +148,15 @@
       padding: 5px;
     }
 
+    .silverline {
+        border-top: 1px solid silver;
+        width: 300px;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        padding: 5px;
+    }
+    
 </style>
 
  <!-- Starts Body > -->
@@ -148,8 +185,9 @@
 
 {% block content %}{% endblock %}
 
+<span class="block"></span>
 <p> Feel free to navigate through the links, or just download my resume! </p>
-<div id="resumepdf", style="padding:10px;margin-bottom:10px;">   
+<div id="resumepdf", style="padding:10px;margin-bottom:10px;">       
     <iframe
         src="https://www.docdroid.net/6yaurym/anqi-xu-new-pdf"
         frameBorder="0"
