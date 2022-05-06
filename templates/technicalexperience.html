@@ -2,16 +2,37 @@
 
 {% block content %}
 <style>
+    :root {
+        --darkerblue: rgb(4, 8, 19);
+    }
+
     div.rocket {
         color: white;
         padding: 20px; 
         margin: 25px;
-        background-color: rgb(4, 8, 19);
+        background-color: var(--darkerblue);
+        animation-name: linetrans;
+        animation-duration: 2s;
     }
 
     p.italic {
       font-style: italic;
     }
+
+    @keyframes linetrans {
+	0% {
+		transform: scale(0, .025);
+	}
+    1% {background-color: white;}
+    69% {background-color: white;}
+	70% {
+		transform: scale(1, .025);
+	}
+    95%{
+        transform: scale(1, 1);
+    }
+    100% {background-color: var(--darkerblue);}
+}
 </style>
 
 <title>Technical Experience</title>
