@@ -10,6 +10,9 @@
         animation-name: linetrans;
         animation-duration: 2s;
         animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
     }
 
     div.textana {
@@ -20,6 +23,9 @@
         animation-name: linetrans;
         animation-duration: 2s;
         animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
     }
 
     div.claw {
@@ -30,6 +36,9 @@
         animation-name: linetrans;
         animation-duration: 2s;
         animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
     }
 
     div.chair {
@@ -40,6 +49,9 @@
         animation-name: linetrans;
         animation-duration: 2s;
         animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
     }
 
     p.italic {
@@ -52,9 +64,9 @@
 
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
-    1% {background-color: white;}
+    1% {background-color: white; top: 100px;}
     69% {background-color: white;}
-	70% {transform: scale(1, .025);}
+	70% {transform: scale(1, .025); top: 0px;}
     95% {transform: scale(1, 1);}
     100% {background-color: var(--darkerblue);}
     }

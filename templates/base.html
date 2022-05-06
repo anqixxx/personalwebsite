@@ -4,28 +4,75 @@
     <script src="https://kit.fontawesome.com/8ace5b7d41.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
 </head>
+<!-- <meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" /> -->
 
 <!-- ul stands for unordered list-->
 <!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
 <!-- li HTML element is used to represent an item in a list-->
-<!-- rgb(196, 207, 242) -->
 <style>
-      :root {
+    *{
+        border: 0;
+        padding: 0;
+        margin: 0;
+}
+    :root {
         --darkblue: rgb(9, 20, 45);
         --white: #ffffff; 
         --lightblue: rgb(196, 207, 242);
+        --darkerblue: rgb(4, 8, 19);
+    }
+
+    
+    hr {
+        border:0;
+        border-top:1px solid #eee;
+        margin:20px 0px;
+        max-width: 1150px; 
+        padding-left: 5px;        
+        padding-right: 5px;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: content-box;
+        height:0;
+        overflow:visible;
+        position: relative;
     }
 
     body {  
-        background-color: rgb(196, 207, 242);
+        background-color: var(--darkblue);
+        color: grey;
+        align-items: center;
         text-align: center;
-        font-family: 'Fauna One', serif;
-        font-size: 16px;  
-      }
+        justify-content: center;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 16px;
+        margin: 0px;
+    }
 
     h1 {
-      font-family: Cinzel, serif;
-      font-size: 46px;  
+        font-family: 'Playfair Display SC', serif;
+        font-size: 46px;  
+    }
+
+    h2 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 46px;  
+    }
+
+    h3 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 20px;
+        line-height: 1.8;  
+    }
+
+    h4 {
+      font-family: 'Playfair Display SC', serif;
+    }
+
+    p.big {
+          line-height: 1.8;
     }
 
     ul { 
@@ -33,11 +80,9 @@
       margin: 0;
       padding: 0;
       background-color: #fbfbfb;
-      border: 1px solid #e7e7e7;
       position: fixed;
       top: 0;
-      width: 100%;
-
+      width: 200%;
     }
 
     li {
@@ -46,7 +91,7 @@
 
     li a {
         display: block;
-        color: rgb(196, 207, 242);
+        color: var(--darkblue);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -54,7 +99,8 @@
     }
 
     li a:hover {
-        background-color: #111;
+        background-color: var(--darkblue);
+        color: white;
     }
 
     /* The dropdown container */
@@ -66,7 +112,7 @@
     /* Dropdown button */
     .dropdown .dropbtn {
         font-size: 16px;
-        color: rgb(196, 207, 242);
+        color: var(--darkblue);
         border: none;
         outline: none;
         padding: 14px 16px;
@@ -77,12 +123,61 @@
 
     /* Add a black background color to navbar links on hover */
     .navbar a:hover, .dropdown:hover .dropbtn {
-         background-color: #111;
+        background-color: var(--darkblue);
+        color: white;
     }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: var(--darkblue);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: var(--darkblue);
+        color: white;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #resumepdf{
+      display: flex;
+      position: relative;
+      bottom:0;
+      align-items: center;
+      justify-content: center;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fbfbfb;
+    }
+    
 
     #navbar{
         z-index: 10000;
         position: fixed;
+        float: left;
+        width: 100%;
+        padding:0px;
+        margin-top:30px;
+        box-sizing: border-box;
     }
 
     span.block {
@@ -92,48 +187,27 @@
       padding: 5px;
     }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    span.smallblock {
+      display: inline-block;
+      max-width: 100px;
+      height: 50px;
+      padding: 5px;
+    }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: rgb(196, 207, 242);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: black;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-  }
-
+    .silverline {
+        border-top: 1px solid silver;
+        max-width: 300px;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        padding: 5px;
+    }
+    
 </style>
-
 
  <!-- Starts Body > -->
 <body>
-  <div id="navbar", style="padding:20px;margin-top:30px;">   
+<div id="navbar">   
     <ul>
         <li><a href="http://127.0.0.1:5000/">HOME</a></li>
         <div class="dropdown">
@@ -156,6 +230,7 @@
 <span class="block"></span>
 
 {% block content %}{% endblock %}
+<hr>
 
 <div class="footer">
   <p>Check out my Resume!</p>
