@@ -11,7 +11,7 @@
       position: relative;
       left: 50%;
       padding: 100px; 
-      width: 500px;
+      max-width: 500px;
       transform: translateX(-50%);
     }
 
@@ -25,7 +25,7 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 100px; 
-        width: 550px;
+        max-width: 550px;
     }
 
     div.mechanical {
@@ -34,11 +34,11 @@
       color: white;
       animation-duration: 2s;
       animation-name: movement;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 100px; 
-        width: 600px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 100px; 
+      max-width: 600px;
     }
 
     div.languages {
@@ -51,18 +51,16 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 100px; 
-        width: 650px;
+        max-width: 650px;
     }
 
 
     @keyframes movement {
-      0%   {background-color:white; left: 10%;}
-      20%  {background-color: grey; left:90%;}
-      40%  {background-color:white; left:30%; top:0;}
-      60%  {background-color: grey; left:70%;}
-      80% {background-color: white; left: 40%;}
-      90% {left: 60%;}
-      100% {background-color: var(--darkerblue); left: 50%;}
+      0%   {background-color:var(--darkerblue); left: 15%; color: white; opacity: 0%;}
+      25%  {background-color: white; left:85%; opacity: 25%;}
+      50%  {background-color:var(--darkerblue); left:32.5%; top:0; opacity: 50%;}
+      75%  {background-color: white; left:67.5%; opacity: 75%;}
+      100% {background-color: var(--darkerblue); left: 50%; opacity: 100%;}
 
 }
 

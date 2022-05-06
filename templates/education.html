@@ -11,11 +11,32 @@
 
     div.edu{
         color: white;
+        position: relative;
         padding-top: 30px;
         padding-bottom: 30px;
         background-color: var(--darkerblue);
         justify-self: center;
         margin: 25px;
+        animation-name: opacity;
+        animation-duration: 4s;
+    }
+
+    /* make a assymetic white border around edu to make it look cool
+    can also apply animation to it */
+
+    div.test{
+        background-color: var(--darkblue);
+        position: relative;
+        z-index: 900;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-self: center;
+        margin: 30px;
+    }
+
+    @keyframes opacity {
+        0% {opacity: 0;}
+        100% {opacity: 100;}
     }
 
 </style>
@@ -41,4 +62,5 @@
 </p>
 
 </div>
+
 {% endblock %}

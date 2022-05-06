@@ -7,6 +7,9 @@
         background-color: var(--darkerblue);
         padding: 20px; 
         margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
     }
 
     div.textana {
@@ -14,6 +17,9 @@
         padding: 20px; 
         background-color: var(--darkerblue);
         margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
     }
 
     div.claw {
@@ -21,6 +27,9 @@
         padding: 20px; 
         background-color: var(--darkerblue);
         margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
     }
 
     div.chair {
@@ -28,15 +37,27 @@
         padding: 20px; 
         background-color: var(--darkerblue);
         margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
     }
 
     p.italic {
       font-style: italic;
     }
+
     h3.bold{
         font-style: bold;
     }
 
+    @keyframes linetrans {
+	0% {transform: scale(0, .025);}
+    1% {background-color: white;}
+    69% {background-color: white;}
+	70% {transform: scale(1, .025);}
+    95% {transform: scale(1, 1);}
+    100% {background-color: var(--darkerblue);}
+    }
 </style>
 
 <title>Technical Projects</title>

@@ -7,6 +7,8 @@
         background-color: var(--darkerblue);
         padding: 20px; 
         margin: 25px;
+        animation-name: unfurl;
+        animation-duration: 2s;
     }
 
     div.ecoclub {
@@ -14,11 +16,23 @@
         background-color: var(--darkerblue);
         padding: 20px; 
         margin: 25px;
+        animation-name: unfurl;
+        animation-duration: 2s;
     }
 
     p.italic {
       font-style: italic;
     }
+
+    @keyframes unfurl {
+	0% {transform: scale(.005, 0); background-color: white;}
+	20% {transform: scale(.005, 1); background-color: white; color: white;}
+    90% {transform: scale(1, 1); opacity: 40%;}
+    95% {color: rgba(3, 7, 16, 0.776);}
+    100% {background-color: var(--darkerblue); color: white;}
+    }
+
+
 </style>
 
 <title>Non Tech</title>
