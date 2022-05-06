@@ -1,4 +1,5 @@
 {% extends "resume.html" %}
+{% block content %}
 <style>
     p.italic {
         font-style: italic; 
@@ -7,17 +8,29 @@
     h3.bold{
         font-style: bold;   
     }
+
+    div.edu{
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--darkerblue);
+        justify-self: center;
+        margin: 25px;
+    }
+
 </style>
 
-
-{% block content %}
 <title>Education</title>
 <h2> EDUCATION </h2>
+<span class="smallblock"></span>
 
+<div class="edu">
 <h3 class="bold">The University of British Columbia</h3>
 <h3> Engineering Physics, Bachelor of Applied Science</h3>
 <p class="italic">  Sept 2020 - May 2025 </p>
+<br>
 <img src="images\ubcback.jpg" alt="UBC Image">
+<br>
 <p class="big"> I am currently in my second year of Engineering Physics at UBC! On campus you can either find me 
     <br>
     checking out food places, studying with friends, or gyming at the ARC! I am a part of UBC Rocket, an 
@@ -26,4 +39,6 @@
     <br>
     events throughout the year for Engineering Physics students!
 </p>
+
+</div>
 {% endblock %}
