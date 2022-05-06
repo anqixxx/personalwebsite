@@ -10,10 +10,16 @@
 <!-- a stands for elements within the list, a variable to distinguish between everything, could be any letter-->
 <!-- li HTML element is used to represent an item in a list-->
 <style>
+    *{
+        border: 0;
+        padding: 0;
+        margin: 0;
+}
     :root {
         --darkblue: rgb(9, 20, 45);
         --white: #ffffff; 
         --lightblue: rgb(196, 207, 242);
+        --darkerblue: rgb(4, 8, 19);
     }
 
     body {  
@@ -24,6 +30,7 @@
         justify-content: center;
         font-family: "Noto Sans", sans-serif;
         font-size: 16px;
+        margin: 0px;
     }
 
     h1 {
@@ -51,10 +58,9 @@
       margin: 0;
       padding: 0;
       background-color: #fbfbfb;
-      border: 1px solid #e7e7e7;
       position: fixed;
       top: 0;
-      width: 100%;
+      width: 200%;
     }
 
     li {
@@ -142,15 +148,28 @@
       color: #fbfbfb;
     }
     
+
     #navbar{
         z-index: 10000;
         position: fixed;
+        float: left;
+        width: 100%;
+        padding:0px;
+        margin-top:30px;
+        box-sizing: border-box;
     }
 
     span.block {
       display: inline-block;
       width: 100px;
       height: 100px;
+      padding: 5px;
+    }
+
+    span.smallblock {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
       padding: 5px;
     }
 
@@ -167,7 +186,7 @@
 
  <!-- Starts Body > -->
 <body>
-<div id="navbar", style="padding:20px;margin-top:30px;">   
+<div id="navbar">   
     <ul>
         <li><a href="http://127.0.0.1:5000/">HOME</a></li>
         <div class="dropdown">

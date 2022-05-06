@@ -4,20 +4,21 @@
 <style>
     div.programming {
       text-align: center;
-      background-color: #fbfbfb;
+      background-color: var(--darkerblue);
+      color: white;
       animation-name: movement;
       animation-duration: 3s;
       position: relative;
       left: 50%;
       padding: 100px; 
       width: 500px;
-      margin: 25px;
       transform: translateX(-50%);
     }
 
     div.electrical {
       text-align: center;
-      background-color: #fbfbfb;
+      background-color: var(--darkerblue);
+      color: white;
       animation-name: movement;
       animation-duration: 3s;
         position: relative;
@@ -25,12 +26,12 @@
         transform: translateX(-50%);
         padding: 100px; 
         width: 550px;
-        margin: 25px;
     }
 
     div.mechanical {
       text-align: center;
-      background-color: #fbfbfb;
+      background-color: var(--darkerblue);
+      color: white;
       animation-duration: 3s;
       animation-name: movement;
         position: relative;
@@ -38,12 +39,12 @@
         transform: translateX(-50%);
         padding: 100px; 
         width: 600px;
-        margin: 25px;
     }
 
     div.languages {
       text-align: center;
-      background-color: #fbfbfb;
+      background-color: var(--darkerblue);
+      color: white;
       animation-duration: 3s;
       animation-name: movement;
       position: relative;
@@ -51,7 +52,6 @@
         transform: translateX(-50%);
         padding: 100px; 
         width: 650px;
-        margin: 25px;
     }
 
     @keyframes colourchange {
@@ -60,19 +60,21 @@
     }
 
     @keyframes movement {
-      0%   {background-color:black; left:5%; top:0;}
-      10%  {background-color:var(--lightblue); left:95%; top:0;}
+      0%   {background-color:black; left:5%;}
+      10%  {background-color:var(--lightblue); left:95%;}
       35%  {background-color:grey; left:25%; top:0;}
-      60%  {background-color:var(--lightblue); left:75%; top:0;}
-      80% {background-color:white; left: 30%; top:0px;}
-      90% {background-color: gainsboro; left: 60%; top:0px;}
-      100% {background-color:#fbfbfb; left: 50%; top:0px;}
+      60%  {background-color:var(--lightblue); left:75%;}
+      80% {background-color:white; left: 30%;}
+      90% {background-color: gainsboro; left: 60%;}
+      100% {background-color:#fbfbfb; left: 50%;}
 
 }
 
 </style>
 <title>Skills</title>
 <h2> SKILLS </h2>
+
+<span class="smallblock"></span>
 
 <div class="programming">
     <h3> Programming </h3>
@@ -81,6 +83,8 @@
     </p>
 </div>
 
+<span class="smallblock"></span>
+
 <div class="electrical">
     <h3> Electrical </h3>
     <p>
@@ -88,12 +92,16 @@
     </p>
 </div>
 
+<span class="smallblock"></span>
+
 <div class="mechanical">
     <h3> Mechanical </h3>
     <p>
         Solidworks, Prototyping, Engineering Drawings
     </p>
 </div>
+
+<span class="smallblock"></span>
 
 <div class="languages">
     <h3> Languages </h3>
