@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from flask_mail import Mail, Message
 from forms import ContactForm
-import os
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -83,18 +83,15 @@ def skills():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-    if form.is_submitted():
-
+    if request.method == 'POST':
         result = request.form
-        # result['email'] = request.form['username']
-        # result['message'] = request.form['message'] 
-
-        # sendContactForm(result)
-
+        email = request.form["username"]
+        message = request.form["query"]
+        res = pd.DataFrame({'email': email, 'message': message}, index=[0])
+        res.to_csv('./contactusMessage.csv')
         return render_template('user.html', result=result)
-
-        # result is immutable dictionary, key value pairs
-    return render_template('contact.html', form=form)
+    else:
+        return render_template('contact.html', form=form)
 
 # want to render html content 
 if __name__ == '__main__':

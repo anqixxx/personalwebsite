@@ -16,7 +16,31 @@
         font-weight:400;
     }
 
+    h3 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 30px;
+        line-height: 1.8;  
+        font-weight:400 !important;
+    }
     
+    div.gallery {
+        margin: 5px;
+        position: relative;
+        border: 1px solid #ccc;
+        width: 180px;
+        float: left;
+        left: 33%;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
 </style>
 
 <title>Contact</title>
@@ -60,5 +84,24 @@
     
     </div>
 
+<hr>
+<h3 > MORE WAYS TO GET IN TOUCH </h3>
+<br>
+<div class="gallery">
+      <img src="/static/sunset.jpg" alt="Sunset" style="display:block;margin:auto"   width="600" height="400">
+  </div>
+  
+  <div class="gallery">
+      <img src="/static/snow.jpg" alt="Forest" width="600" height="400">
+  </div>
+  
+  <div class="gallery">
+      <img src="/static/cherryblossoms.jpg" alt="Northern Lights" width="600" height="400">
+  </div>
+  <br>
+
+  <br>
+
+  <br>
 
 {% endblock %}
