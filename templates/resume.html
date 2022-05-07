@@ -22,7 +22,7 @@
         --darkerblue: rgb(4, 8, 19);
     }
 
-    hr    {border:0;
+    hr  {border:0;
         border-top:1px solid #eee;
         margin:20px 0;
         box-sizing:content-box;
@@ -41,20 +41,32 @@
         margin: 0px;
     }
 
-    h1 {
+    h1, h2 {
         font-family: 'Playfair Display SC', serif;
-        font-size: 46px;  
-    }
-
-    h2 {
-        font-family: 'Playfair Display SC', serif;
-        font-size: 46px;  
+        font-size: 46px;
+        font-weight:400;  
     }
 
     h3 {
         font-family: 'Playfair Display SC', serif;
         font-size: 20px;
         line-height: 1.8;  
+        font-weight:400;
+    }
+
+    h3 {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 20px;
+        line-height: 1.8;  
+        font-weight:400;
+    }
+
+    h5 {
+      font-family: 'Playfair Display SC', serif;
+      font-size: 20px;
+      font-weight:400;
+      line-height: 1.8;  
+      margin: 10px 0;
     }
 
     p.big {
@@ -97,8 +109,10 @@
 
     /* Dropdown button */
     .dropdown .dropbtn {
-        font-size: 16px;
         color: var(--darkblue);
+        font-size: 20px;
+        font-weight:400;
+        line-height: 1.8;  
         border: none;
         outline: none;
         padding: 14px 16px;
@@ -195,6 +209,7 @@
 <body>
 <div id="navbar">   
     <ul>
+        <h5>
         <li><a href="http://127.0.0.1:5000/">HOME</a></li>
         <div class="dropdown">
             <li><button class="dropbtn">RESUME 
@@ -210,6 +225,7 @@
             </div> </li>
         <li><a href="about">ABOUT</a></li>
         <li><a href="signup">CONTACT</a></li>
+        </h5>
       </ul>
 </div>
 

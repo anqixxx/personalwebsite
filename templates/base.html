@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/8ace5b7d41.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <!-- <meta http-equiv="refresh" content="7; url='https://www.docdroid.net/6yaurym/anqi-xu-new-pdf'" /> -->
 
@@ -54,6 +55,7 @@
     h1 {
         font-family: 'Playfair Display SC', serif;
         font-size: 46px;  
+        font-weight:400;
     }
 
     h2 {
@@ -69,6 +71,14 @@
 
     h4 {
       font-family: 'Playfair Display SC', serif;
+    }
+
+    h5 {
+      font-family: 'Playfair Display SC', serif !important;
+      font-size: 20px !important;
+      font-weight: 400 !important;
+      line-height: 1.8 !important;  
+      margin:10px 0;
     }
 
     p.big {
@@ -111,8 +121,10 @@
 
     /* Dropdown button */
     .dropdown .dropbtn {
-        font-size: 16px;
         color: var(--darkblue);
+        font-size: 20px !important;
+        font-weight:400 !important;
+        line-height: 1.8 !important;
         border: none;
         outline: none;
         padding: 14px 16px;
@@ -209,6 +221,7 @@
 <body>
 <div id="navbar">   
     <ul>
+        <h5>
         <li><a href="http://127.0.0.1:5000/">HOME</a></li>
         <div class="dropdown">
             <li><button class="dropbtn">RESUME 
@@ -224,12 +237,14 @@
             </div> </li>
         <li><a href="about">ABOUT</a></li>
         <li><a href="signup">CONTACT</a></li>
+        </h5>
       </ul>
 </div>
 
 <span class="block"></span>
 
 {% block content %}{% endblock %}
+
 <hr>
 
 <div class="footer">
