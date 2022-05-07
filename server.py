@@ -1,12 +1,49 @@
 from flask import Flask, render_template, redirect, request
-# from flask_mail import Mail
+from flask_mail import Mail, Message
 from forms import ContactForm
-
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'penguin'
-# mail = Mail(app)
 
+mail_settings = {
+    "MAIL_SERVER": 'smtp.gmail.com',
+    "MAIL_PORT": 465,
+    "MAIL_USE_TLS": False,
+    "MAIL_USE_SSL": True,
+    "MAIL_USERNAME": 'anqiwebsitetest@gmail.com',
+    "MAIL_PASSWORD": 'websitetester1'
+    # "MAIL_USERNAME": os.environ['EMAIL_USER'],
+    # "MAIL_PASSWORD": os.environ['EMAIL_PASSWORD']
+}
+
+app.config['SECRET_KEY'] = 'penguin'
+app.config.update(mail_settings)
+mail = Mail(app)
+
+# if __name__ == '__main__':
+#     with app.app_context():
+#         msg = Message(subject="Hello",
+#                       sender=app.config.get("MAIL_USERNAME"),
+#                       recipients=["anqix2002@gmail.com"], # replace with your email for testing
+#                       body="This is a test email I sent with Gmail and Python!")
+#         mail.send(msg)
+
+
+def sendContactForm(result):
+    msg = Message(subject="Contact Form from Website", 
+            sender=app.config.get("MAIL_USERNAME"), 
+            recipients="anqix2002@gmail.com") 
+
+    msg.body = """
+        Hey Anqi,
+
+        You just recieved a contact form!
+
+        Email: {}
+        Message: {}
+    """.format(result['email'], result['message'])
+
+    mail.send(msg)
 
 # routing some funtion to our home function, which turns hello world
 @app.route('/')
@@ -47,9 +84,15 @@ def skills():
 def contact():
     form = ContactForm()
     if form.is_submitted():
-        # email == request.form['username'].replace('','').lower()
+
         result = request.form
+        # result['email'] = request.form['username']
+        # result['message'] = request.form['message'] 
+
+        # sendContactForm(result)
+
         return render_template('user.html', result=result)
+
         # result is immutable dictionary, key value pairs
     return render_template('contact.html', form=form)
 
