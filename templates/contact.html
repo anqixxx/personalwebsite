@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+<style>
+    div.a {
+      text-align: center;
+    }
+    h1 {
+
+        font-family: 'Playfair Display SC', serif;
+        font-size: 46px;  
+        font-weight:400;
+    }
+
+    
+</style>
+
+<title>Contact</title>
+<h1>C O N T A C T&nbsp&nbsp&nbspM E</h1>
+<hr>
+
+<div class="a">
+
+    <form action="" method="post">
+        <p>
+            {{form.username.label}} <br>
+            {{form.username(size=30)}}
+        </p>
+
+        {% if form.username.errors %}
+        <ul class="errors">
+            {% for error in form.username.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <br>
+        <br>
+        <p>
+            {{form.query.label}} <br>
+            {{ form.query(rows=10, cols=50) }}
+        </p>
+
+        {% if form.query.errors %}
+        <ul class="errors">
+            {% for error in form.query.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <p>
+            {{form.submit()}}
+        </p>
+    </form>
+    
+    </div>
+
+
+{% endblock %}

@@ -1,8 +1,12 @@
 from flask import Flask, render_template, redirect, request
-from forms import SignUpForm
+# from flask_mail import Mail
+from forms import ContactForm
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'penguin'
+# mail = Mail(app)
+
 
 # routing some funtion to our home function, which turns hello world
 @app.route('/')
@@ -39,14 +43,15 @@ def education():
 def skills():
     return render_template('skills.html')
 
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-    form = SignUpForm()
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    form = ContactForm()
     if form.is_submitted():
+        # email == request.form['username'].replace('','').lower()
         result = request.form
         return render_template('user.html', result=result)
         # result is immutable dictionary, key value pairs
-    return render_template('signup.html', form=form)
+    return render_template('contact.html', form=form)
 
 # want to render html content 
 if __name__ == '__main__':
