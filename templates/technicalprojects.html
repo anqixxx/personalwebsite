@@ -21,6 +21,46 @@
         position: relative;
     }
 
+    div.program {
+        color: white;
+        background-color: var(--darkerblue);
+        padding: 20px; 
+        margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    div.elec {
+        color: white;
+        background-color: var(--darkerblue);
+        padding: 20px; 
+        margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    div.mech {
+        color: white;
+        background-color: var(--darkerblue);
+        padding: 20px; 
+        margin: 25px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        border: 2px solid silver;
+        border-radius: 5px;
+        position: relative;
+    }
+
+
     p.italic {
       font-style: italic;
     }
@@ -32,7 +72,8 @@
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
    }
-   button {
+   
+   #btn {
       padding: 10px;
       border: none;
       background-color: rgb(51, 51, 192);
@@ -62,26 +103,86 @@
 <title>Technical Projects</title>
 <h2> TECHNICAL PROJECTS </h2>
 <!-- Overall, Software, Electrical, Mechanical -->
-<button class="toggleDisplay">Hide Div</button>
 
-<div class ="test">
-This is a div element
-</div>
+<button id="btn">Show All</button>
+<button id="programbtn">Software</button>
+<button id="elecbtn">Electrical</button>
+<button id="mechbtn">Mechanical</button>
 
 <script>
-   document .querySelector(".toggleDisplay") .addEventListener("click", toggleDivDisplay);
-   function toggleDivDisplay() {
-      var x = document.querySelector(".techproj");
-      if (x.style.display === "none") {
-         x.style.display = "block";
-      } else {
-         x.style.display = "none";
-      }
-   }
+const btn = document.getElementById('btn');
+const programbtn = document.getElementById('programbtn');
+const elecbtn = document.getElementById('elecbtn');
+const mechbtn = document.getElementById('mechbtn');
+
+programbtn.addEventListener('click', () => {
+	const techprojs = document.getElementsByClassName('techproj');
+	const programs = document.getElementsByClassName('program');
+
+	for (const techproj of techprojs) {
+        techproj.style.display = "none";
+	}
+
+    for (const program of programs) {
+        program.style.display = "block";
+	}
+
+});
+
+elecbtn.addEventListener('click', () => {
+	const techprojs = document.getElementsByClassName('techproj');
+	const elecs = document.getElementsByClassName('elec');
+
+	for (const techproj of techprojs) {
+        techproj.style.display = "none";
+	}
+
+    for (const elec of elecs) {
+        elec.style.display = "block";
+	}
+
+});
+
+mechbtn.addEventListener('click', () => {
+	const techprojs = document.getElementsByClassName('techproj');
+	const mechs = document.getElementsByClassName('mech');
+
+	for (const techproj of techprojs) {
+        techproj.style.display = "none";
+	}
+
+    for (const mech of mechs) {
+        mech.style.display = "block";
+	}
+
+});
+
+btn.addEventListener('click', () => {
+	const techprojs = document.getElementsByClassName('techproj');
+
+	for (const techproj of techprojs) {
+            techproj.style.display = "block";
+	}
+});
+
+// Really liked this code, allowed it to be hid or shown based on prev. values
+// btn.addEventListener('click', () => {
+// 	const techprojs = document.getElementsByClassName('techproj');
+
+// 	for (const techproj of techprojs) {
+    
+//         if (techproj.style.display === "none") {
+//             techproj.style.display = "block";
+//         } else {
+//             techproj.style.display = "none";
+//         }
+// 	}
+// });
+
 </script>
 
 <div class="grid-container">
-    <div class="techproj">
+    <div class="techproj program">
         <h3 class="bold"> Wikipedia Web-scraper </h3>
         <p class="italic">Java</p>
         <p class="big">
@@ -93,7 +194,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj program">
         <h3 class="bold"> Portfolio Website    </h3>
         <p class="italic"> HTML/CSS, Flask</p>
         <p class="big">
@@ -101,7 +202,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj program">
         <h3 class="bold"> Email Analyzer </h3>
         <p class="italic">Java</p>
         <p class="big">
@@ -113,7 +214,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj program">
         <h3 class="bold"> Plagiarism Detector </h3>
         <p  class="italic">Java</p>
         <p class="big">
@@ -127,7 +228,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj program mech">
         <h3 class="bold"> Arduino Robotic Claw </h3>
         <p class="italic">C, Mechanical Design</p>
         <p class="big">
@@ -139,7 +240,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj elec">
         <h3 class="bold"> Analog-Digital Converter </h3>
         <p class="italic">Electrical Design</p>
         <p class="big"> 
@@ -149,7 +250,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj elec">
         <h3 class="bold"> Circuit Design and Analysis Lab </h3>
         <p class="italic">Electrical Design</p>
         <p class="big"> 
@@ -161,7 +262,7 @@ This is a div element
             </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj mech">
         <h3 class="bold"> Cardboard Chair </h3>
         <p class="italic">Mechanical Design</p>
         <p class="big"> Created a full-sized chair purely out of cardboard that held over 300 pounds without breaking 
@@ -172,7 +273,7 @@ This is a div element
         </p>
     </div>
     
-    <div class="techproj">
+    <div class="techproj mech">
         <h3 class="bold"> Popsicle Bridge </h3>
         <p class="italic">Mechanical Design</p>
         <p class="big">
