@@ -2,6 +2,10 @@ from flask import Flask, render_template, redirect, request
 from flask_mail import Mail, Message
 from forms import ContactForm
 import pandas as pd
+from datetime import datetime, timezone
+from csv import writer, DictWriter
+
+
 
 app = Flask(__name__)
 
@@ -28,6 +32,22 @@ mail = Mail(app)
 #                       body="This is a test email I sent with Gmail and Python!")
 #         mail.send(msg)
 
+List=['Email','Message','Time']
+  
+# Open our existing CSV file in append mode
+# Create a file object for this file
+with open('contactusMessage.csv', 'a') as f_object:
+  
+    # Pass this file object to csv.writer()
+    # and get a writer object
+    writer_object = writer(f_object)
+  
+    # Pass the list as an argument into
+    # the writerow()
+    writer_object.writerow(List)
+  
+    #Close the file object
+    f_object.close()
 
 def sendContactForm(result):
     msg = Message(subject="Contact Form from Website", 
@@ -87,8 +107,29 @@ def contact():
         result = request.form
         email = request.form["username"]
         message = request.form["query"]
-        res = pd.DataFrame({'email': email, 'message': message}, index=[0])
-        res.to_csv('./contactusMessage.csv')
+        time = datetime.now()
+        res = pd.DataFrame({'email': email, 'message': message, 'time': time}, index=[0])
+        res.to_csv('./contactusMessage.csv', mode='a', index=False, header=False)
+
+        # field_names = List=['Email','Message','Time']
+        # # Dictionary
+        # dict={{'Email': email, 'Message': message}, 'Time'= datetime.now()}
+       
+        # # Open your CSV file in append mode
+        # # Create a file object for this file
+        # with open('event.csv', 'a') as f_object:
+        
+        # # Pass the file object and a list 
+        # # of column names to DictWriter()
+        # # You will get a object of DictWriter
+        # dictwriter_object = DictWriter(f_object, fieldnames=field_names)
+  
+        # #Pass the dictionary as an argument to the Writerow()
+        # dictwriter_object.writerow(dict)
+  
+        # #Close the file object
+        # f_object.close()
+        
         return render_template('user.html', result=result)
     else:
         return render_template('contact.html', form=form)

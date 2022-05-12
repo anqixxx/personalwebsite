@@ -13,6 +13,17 @@
         border-radius: 5px;
     }
 
+    div.bccr {
+        color: white;
+        padding: 20px; 
+        margin: 25px;
+        background-color: var(--darkerblue);
+        animation-name: linetrans;
+        animation-duration: 2s;
+        border: 2px solid silver;
+        border-radius: 5px;
+    }
+
     p.italic {
       font-style: italic;
     }
@@ -30,9 +41,26 @@
 <title>Technical Experience</title>
 <h2> TECHNICAL EXPERIENCE </h2>
 
+<div class="bccr">
+    <h3> BC Cancer Research Co-op  </h3>
+    <p class="italic"> January 2022 - April 2022     </p>
+    <div class="silverline"></div>
+    <p class="big">
+        Assisted in the development and training of a deep-learning algorithm to segment cell nuclei with an up to 98% accuracy rate
+    <br>	       
+        Delineated and analyzed over 800 whole-slide histopathology images within MATLAB to further the development of a diagnostic software suite of tools
+    <br>	
+        Designed and soldered a custom printed board in KiCAD for multispectral imaging
+    <br>	
+        Sourced and tested specific light-emitting diodes that are small enough to fit under the microscope stage
+</p>
+    <div class="silverline"></div>
+
+</div>
+
 <div class="rocket">
     <h3> UBC Rocket — Aerostats Co-Lead  </h3>
-    <p class="italic">Sept 2020 - Present     </p>
+    <p class="italic">September 2020 - Present     </p>
     <div class="silverline"></div>
     <p class="big">
         Created and launched a meteorological balloon to test wind conditions up to 30km high to determine the suitability for rocket launches 
@@ -47,4 +75,14 @@
 
 </div>
 
+<div class="rocket">
+    <h3> UBC Rocket —  Airframe and Internals  </h3>
+    <p class="italic"> Febuary 2022 - Present     </p>
+    <div class="silverline"></div>
+    <p class="big">
+        Measured force and pressure within an RCS (Roll Control System) test stand using Labjack and Labview
+    </p>
+    <div class="silverline"></div>
+
+</div>
 {% endblock %}

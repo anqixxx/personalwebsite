@@ -2,49 +2,16 @@
 
 {% block content %}
 <style>
-    div.emailana {
-        color: white;
-        background-color: var(--darkerblue);
-        padding: 20px; 
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
     }
 
-    div.textana {
+    div.techproj {
         color: white;
-        padding: 20px; 
         background-color: var(--darkerblue);
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
-    }
-
-    div.claw {
-        color: white;
         padding: 20px; 
-        background-color: var(--darkerblue);
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
-    }
-
-    div.chair {
-        color: white;
-        padding: 20px; 
-        background-color: var(--darkerblue);
         margin: 25px;
         animation-name: linetrans;
         animation-duration: 2s;
@@ -74,52 +41,111 @@
 
 <title>Technical Projects</title>
 <h2> TECHNICAL PROJECTS </h2>
+<!-- Overall, Software, Electrical, Mechanical -->
 
-<div class="emailana">
-    <h3 class="bold"> Email Analyzer </h3>
-    <p class="italic">Java</p>
-    <p class="big">
-        Used graph theory to collect advanced metrics regarding interactions, whilst using metrics to filter such interactions through Java programming 
-    <br>
-        Parsed through a text file to create directed and undirected graphs 
-    <br>
-        Generated reports on certain users and time frames, as well as compared users based on different types of activity 
-    </p>
-</div>
-
-<div class="textana">
-    <h3 class="bold"> Text Document Analysis </h3>
-    <p  class="italic">Java</p>
-    <p class="big">
-        Created a document analyzer using Java that parsed through websites or text files to determine sentence and word level metrics, and similarity 
-    <br>
-        Developed algorithms to perform linguistic analysis using the Google Sentiment Analysis API 
-    <br>
-        Compared documents and partitioned them accordingly using similarity metrics ● Tested application using JUnit and regression testing 
-    </p>
-</div>
-
-<div class="claw">
-    <h3 class="bold"> Arduino Robotic Claw </h3>
-    <p class="italic">C</p>
-    <p class="big">
-        Mechanically developed an autonomous claw that senses and picks up objects of various shapes and sizes, ranging from an almond to a full pop can
-    <br>
-        Led development of firmware for functionality of mechanical components of claw using C and the Arduino IDE 
-    <br>
-        Prototyped and tested various mechanical iterations to optimize design and precision 
-    </p>
-</div>
-
-<div class="chair">
-    <h3 class="bold"> Cardboard Chair </h3>
-    <p class="italic">Mechanical Design</p>
-    <p class="big"> Created a full-sized chair purely out of cardboard that held over 300 pounds without breaking 
+<div class="grid-container">
+    <div class="techproj">
+        <h3 class="bold"> Wikipedia Web-scraper </h3>
+        <p class="italic">Java</p>
+        <p class="big">
+            Implemented depth-first search and reverse hashmap sorting to determine the shortest path between two Wikipedia pages
+            <br>
+            Created a Wikipedia mediator server which retrieved pages and statistical information regarding requests
+            <br>
+            Utilized caching and staleness intervals to minimize network access
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Portfolio Website    </h3>
+        <p class="italic"> HTML/CSS, Flask</p>
+        <p class="big">
+            Created and designed a website to display experiences, projects, and skills creatively and interactively with HTML, CSS, Python and Flask
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Email Analyzer </h3>
+        <p class="italic">Java</p>
+        <p class="big">
+            Used graph theory to collect and advanced metrics based on a chain of emails, with filters to specify interactions
+            <br>
+            Generated reports on certain users and time frames, as well as compared users based on different types of activity
+            <br>
+            Used JUnit and test-driven development for 97% line coverage
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Plagiarism Detector </h3>
+        <p  class="italic">Java</p>
+        <p class="big">
+            Created a document analyzer using Java that parsed through websites or text files to determine sentence and word level metrics, and similarity 
         <br>
-        Used interlocking supports to maximize strength and prioritized the user through back and arm supports for ergonomic strength 
+            Developed algorithms to perform linguistic analysis using the Google Sentiment Analysis API 
         <br>
-        Placed first out of 6 teams by using rapid full-scale prototyping with cardboard to analyze areas of weakness 
-    </p>
+            Compared documents and partitioned them accordingly using similarity metrics ● Tested application using JUnit and regression testing 
+        <br>
+            Used JUnit and test-driven development for 94% branch coverage
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Arduino Robotic Claw </h3>
+        <p class="italic">C, Mechanical Design</p>
+        <p class="big">
+            Mechanically developed an autonomous claw that senses and picks up objects of various shapes and sizes, ranging from an almond to a full pop can
+        <br>
+            Led development of firmware for functionality of mechanical components of claw using C and the Arduino IDE 
+        <br>
+            Prototyped and tested various mechanical iterations to optimize design and precision 
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Analog-Digital Converter </h3>
+        <p class="italic">Electrical Design</p>
+        <p class="big"> 
+            Created a circuit to convert an analog voltage into a digital representation via pulse generation that is then outputted into a number displayed by small LEDs
+            <br>
+            Used NOT gates, NAND gates, Op-Amps, flip-flops, counters, Schmitt-trigger Inverters within pulse generators, converters, and control logic gates
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Circuit Design and Analysis Lab </h3>
+        <p class="italic">Electrical Design</p>
+        <p class="big"> 
+            Experimentally designed and troubleshot steady-state RC circuits, damped harmonic oscillators, voltage amplifiers, NAND gates, and logic gates made from MOSFET and BJT transistors 
+            <br>
+            Determined values for capacitors, frequency responses, time constants, resonant frequency and damping, diodes, switching latency, amplitude responses, and critical operating parameters
+            <br>
+            Mathematically modelled results through curve-fitting and waveform function via MATLAB
+            </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Cardboard Chair </h3>
+        <p class="italic">Mechanical Design</p>
+        <p class="big"> Created a full-sized chair purely out of cardboard that held over 300 pounds without breaking 
+            <br>
+            Used interlocking supports to maximize strength and prioritized the user through back and arm supports for ergonomic strength 
+            <br>
+            Placed first out of 6 teams by using rapid full-scale prototyping with cardboard to analyze areas of weakness 
+        </p>
+    </div>
+    
+    <div class="techproj">
+        <h3 class="bold"> Popsicle Bridge </h3>
+        <p class="italic">Mechanical Design</p>
+        <p class="big">
+            Designed and built a 145 g popsicle stick bridge, made from popsicle sticks and white glue, that held 309 pounds (140 kg)
+            <br>
+            Achieved first place out of 20 teams, with the bridge holding 967% times its weight 
+            <br>
+            Utilized rapid prototyping to test forces applied and drew engineering drawings to accurately design new iterations
+        </p>
+    </div>
 </div>
 
 {% endblock %}
