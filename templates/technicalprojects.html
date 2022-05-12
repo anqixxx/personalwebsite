@@ -29,6 +29,26 @@
         font-style: bold;
     }
 
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+   button {
+      padding: 10px;
+      border: none;
+      background-color: rgb(51, 51, 192);
+      color: white;
+      font-size: 18px;
+   }
+   .test {
+      width: 100%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: rgb(210, 230, 173);
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+   }
+
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
     1% {background-color: white; top: 100px;}
@@ -42,6 +62,23 @@
 <title>Technical Projects</title>
 <h2> TECHNICAL PROJECTS </h2>
 <!-- Overall, Software, Electrical, Mechanical -->
+<button class="toggleDisplay">Hide Div</button>
+
+<div class ="test">
+This is a div element
+</div>
+
+<script>
+   document .querySelector(".toggleDisplay") .addEventListener("click", toggleDivDisplay);
+   function toggleDivDisplay() {
+      var x = document.querySelector(".techproj");
+      if (x.style.display === "none") {
+         x.style.display = "block";
+      } else {
+         x.style.display = "none";
+      }
+   }
+</script>
 
 <div class="grid-container">
     <div class="techproj">
@@ -84,7 +121,7 @@
         <br>
             Developed algorithms to perform linguistic analysis using the Google Sentiment Analysis API 
         <br>
-            Compared documents and partitioned them accordingly using similarity metrics ● Tested application using JUnit and regression testing 
+            Compared documents and partitioned them accordingly using similarity metrics
         <br>
             Used JUnit and test-driven development for 94% branch coverage
         </p>
@@ -147,5 +184,6 @@
         </p>
     </div>
 </div>
+
 
 {% endblock %}
