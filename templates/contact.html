@@ -6,9 +6,14 @@
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 <style>
+    * {
+      box-sizing: border-box;
+    }
+
     div.a {
       text-align: center;
     }
+    
     h1 {
 
         font-family: 'Playfair Display SC', serif;
@@ -28,42 +33,50 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
-
     
     div.gallery {
-        margin: 5px;
-        position: relative;
-        border: 1px solid #ccc;
-        width: 180px;
         float: left;
-        left: 33%;
+        position: relative;
+        width: 33.33%;
+        padding: 10px;
+    }
+
+    .row {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    /* clears floats */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
     div.gallery img {
+        border: 1px solid #ccc;
         width: 100%;
         height: auto;
     }
 
-    div.desc {
-        padding: 15px;
-        text-align: center;
-    }
-
     /* visited link */
-    .gallery a:visited {
-    color: white;
+    .overlay a:visited {
+    color: var(--darkerblue);
     text-decoration: none;
+
     }
 
     /* mouse over link */
-    .gallery a:hover{
-        color: grey; 
+    .overlay a:hover{
+        color: white; 
         text-decoration: none;
+
     }
 
-    .gallery a:link{
-        color: grey; 
+    .overlay a:link{
+        color: var(--darkerblue); 
         text-decoration: none;
+
     }
 
     .icon {
@@ -76,6 +89,28 @@
         font-size: 60px;
     }
 
+    .overlay {
+        position: absolute; 
+        bottom: 10%; 
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.868);
+        width: 90%;
+        transition: .5s ease;
+        opacity:0;
+        color: var(--darkerblue);
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Playfair Display SC', serif;
+        line-height: 1.8;  
+        font-weight:400 !important;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .gallery:hover .overlay {
+         opacity: 1;
+    }
 
 </style>
 
@@ -123,49 +158,37 @@
 <hr>
 <h3 > MORE WAYS TO GET IN TOUCH </h3>
 <br>
-<div class="gallery">
-      <img src="/static/sunset.jpg" alt="Sunset" style="display:block;margin:auto"   width="600" height="400">
+<div class="row">
+    <div class="gallery">
+        <a href="mailto:anqix2002@gmail.com">
+        <img src="/static/sunset.jpg" alt="Sunset" style="display:block;margin:auto"   width="600" height="400">
+        <div class="icon"> <i class="fa-regular fa-envelope fa-4x"></i> </div>
+        <div class="overlay"> E M A I L <br><a href="mailto:anqix2002@gmail.com"> anqix2002@gmail.com </a></div>
+        </a>
+    </div>
+  
+  <div class="gallery">
+    <a href="https://github.com/anqixxx">
+      <img src="/static/snow.jpg" alt="Forest" style="display:block;margin:auto"  width="600" height="400">
       <div class="icon">
-        <h3><i class="fa-regular fa-envelope icon-3x"></i></h3>
+        <i class="fa-brands fa-github fa-4x"></i>
       </div>
-        <a href="mailto:anqix2002@gmail.com"> <h4><i> anqix2002@gmail.com</a> </i>
-      </h4>
+      <div class="overlay"> G I T H U B <br><a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/"> anqixxx</a></div>
+    </a>
   </div>
   
   <div class="gallery">
-      <img src="/static/snow.jpg" alt="Forest" width="600" height="400">
+    <a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/">
+      <img src="/static/cherryblossoms.jpg" alt="Northern Lights" style="display:block;margin:auto"   width="600" height="400">
       <div class="icon">
-        <h3><i class="fa-brands fa-github icon-3x"></i></h3>
+        <i class="fa-brands fa-linkedin fa-4x"> </i>
       </div>
-      <h4><i>
-        <a href="https://github.com/anqixxx"><h3><i><h4>anqixxx</a></i>
+      <div class="overlay"> L I N K E D - I N <br><a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/">Anqi Xu</a></div>
+    </a>
 
-      </h4>
   </div>
-  
-  <div class="gallery">
-      <img src="/static/cherryblossoms.jpg" alt="Northern Lights" width="600" height="400">
-      <div class="icon">
-        <h3><i class="fa-brands fa-linkedin icon-3x"></i></h3>
-      </div>
-        <a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/"> <h4>Anqi Xu</a></i>
-      </h4>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+</div>
+
+  <p> Feel free to directly email me, contact me on Github, or message me on LinkedIn!
+
 {% endblock %}
