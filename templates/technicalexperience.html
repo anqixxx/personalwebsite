@@ -28,6 +28,12 @@
       font-style: italic;
     }
 
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 20px;
+    }
+
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
     1% {background-color: white;}
@@ -42,9 +48,14 @@
 <h2> TECHNICAL EXPERIENCE </h2>
 
 <div class="bccr">
-    <h3> BC Cancer Research Co-op  </h3>
+    <h3> <img src="static\bccancer.png" style="max-width: 20px; max-height: 20px;"> BC Cancer Research Co-op  </h3>
     <p class="italic"> January 2022 - April 2022     </p>
     <div class="silverline"></div>
+    <div class="grid-container">
+        <img src="static\bccrcircuit.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+        <img src="static\bccrcmg.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+        <img src="static\bccrpcb.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+    </div>
     <p class="big">
         Assisted in the development and training of a deep-learning algorithm to segment cell nuclei with an up to 98% accuracy rate
     <br>	       
@@ -53,15 +64,19 @@
         Designed and soldered a custom printed board in KiCAD for multispectral imaging
     <br>	
         Sourced and tested specific light-emitting diodes that are small enough to fit under the microscope stage
+        <br>
+        <br>
 </p>
     <div class="silverline"></div>
 
 </div>
 
 <div class="rocket">
-    <h3> UBC Rocket — Aerostats Co-Lead  </h3>
+    <h3> <img src="static\ubcrocket.jpg" style="max-width: 20px; max-height: 20px;"> UBC Rocket — Aerostats Co-Lead  </h3>
     <p class="italic">September 2020 - Present     </p>
     <div class="silverline"></div>
+    <img src="static\aerostatsbox.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+    <img src="static\aerostatscircuit.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
     <p class="big">
         Created and launched a meteorological balloon to test wind conditions up to 30km high to determine the suitability for rocket launches 
     <br>	       
@@ -69,18 +84,31 @@
     <br>	
         Programmed an Arduino to take input from sensors and regularly transmit data 
         <br>	
-        Communicated with suppliers and companies for sponsorship, fully funding 53% of our project 
+        Communicated with suppliers and companies for sponsorship, fully funding 53% of our project
+        <br>
+        <br>
     </p>
     <div class="silverline"></div>
 
 </div>
 
 <div class="rocket">
-    <h3> UBC Rocket —  Airframe and Internals  </h3>
+    <h3> <img src="static\ubcrocket.jpg" style="max-width: 20px; max-height: 20px;">  UBC Rocket —  Airframe and Internals  </h3>
     <p class="italic"> Febuary 2022 - Present     </p>
     <div class="silverline"></div>
+    <img src="static/ailoadcell.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+    <video max-width=auto height=auto
+    controls="controls"/> 
+      
+    <source src="static\rcstest.mp4" 
+        type="video/mp4"> 
+    </video> 
     <p class="big">
         Measured force and pressure within an RCS (Roll Control System) test stand using Labjack and Labview
+        <br>
+        Calibrated a strain gauge S-type load cell for up to 30 kg
+        <br>
+        <br>
     </p>
     <div class="silverline"></div>
 
