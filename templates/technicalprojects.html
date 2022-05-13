@@ -23,43 +23,15 @@
 
     div.program {
         color: white;
-        background-color: var(--darkerblue);
-        padding: 20px; 
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
     }
 
     div.elec {
         color: white;
-        background-color: var(--darkerblue);
-        padding: 20px; 
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
     }
 
     div.mech {
         color: white;
-        background-color: var(--darkerblue);
-        padding: 20px; 
-        margin: 25px;
-        animation-name: linetrans;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        border: 2px solid silver;
-        border-radius: 5px;
-        position: relative;
     }
-
 
     p.italic {
       font-style: italic;
@@ -74,12 +46,49 @@
    }
    
    #btn {
-      padding: 10px;
       border: none;
-      background-color: rgb(51, 51, 192);
-      color: white;
+      background-color: var(--darkerblue);
+      font-family: 'Playfair Display SC', serif;
+      color: grey;
       font-size: 18px;
+      padding: 10px; 
+      margin: 25px;
+      border: 2px solid grey;
    }
+
+   #programbtn {
+      border: none;
+      background-color: var(--darkerblue);
+      font-family: 'Playfair Display SC', serif;
+      color: grey;
+      font-size: 18px;
+      padding: 10px; 
+      margin: 25px;
+      border: 2px solid grey;
+   }
+
+   #elecbtn {
+      border: none;
+      background-color: var(--darkerblue);
+      font-family: 'Playfair Display SC', serif;
+      color: grey;
+      font-size: 18px;
+      padding: 10px; 
+      margin: 25px;
+      border: 2px solid grey;
+   }
+
+   #mechbtn {
+      border: none;
+      background-color: var(--darkerblue);
+      font-family: 'Playfair Display SC', serif;
+      color: grey;
+      font-size: 18px;
+      padding: 10px; 
+      margin: 25px;
+      border: 2px solid grey;
+   }
+
    .test {
       width: 100%;
       padding: 50px 0;
@@ -102,7 +111,6 @@
 
 <title>Technical Projects</title>
 <h2> TECHNICAL PROJECTS </h2>
-<!-- Overall, Software, Electrical, Mechanical -->
 
 <button id="btn">Show All</button>
 <button id="programbtn">Software</button>
@@ -165,20 +173,6 @@ btn.addEventListener('click', () => {
 	}
 });
 
-// Really liked this code, allowed it to be hid or shown based on prev. values
-// btn.addEventListener('click', () => {
-// 	const techprojs = document.getElementsByClassName('techproj');
-
-// 	for (const techproj of techprojs) {
-    
-//         if (techproj.style.display === "none") {
-//             techproj.style.display = "block";
-//         } else {
-//             techproj.style.display = "none";
-//         }
-// 	}
-// });
-
 </script>
 
 <div class="grid-container">
@@ -196,7 +190,7 @@ btn.addEventListener('click', () => {
     
     <div class="techproj program">
         <h3 class="bold"> Portfolio Website    </h3>
-        <p class="italic"> HTML/CSS, Flask</p>
+        <p class="italic"> HTML/CSS, Flask, Javascript</p>
         <p class="big">
             Created and designed a website to display experiences, projects, and skills creatively and interactively with HTML, CSS, Python and Flask
         </p>

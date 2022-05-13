@@ -22,6 +22,13 @@
         line-height: 1.8;  
         font-weight:400 !important;
     }
+
+    h4 {
+      font-family: 'Playfair Display SC', serif;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
     
     div.gallery {
         margin: 5px;
@@ -41,6 +48,35 @@
         padding: 15px;
         text-align: center;
     }
+
+    /* visited link */
+    .gallery a:visited {
+    color: white;
+    text-decoration: none;
+    }
+
+    /* mouse over link */
+    .gallery a:hover{
+        color: grey; 
+        text-decoration: none;
+    }
+
+    .gallery a:link{
+        color: grey; 
+        text-decoration: none;
+    }
+
+    .icon {
+        position: absolute; 
+        bottom:50%;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        color: var(--darkerblue);
+        font-size: 60px;
+    }
+
+
 </style>
 
 <title>Contact</title>
@@ -89,14 +125,31 @@
 <br>
 <div class="gallery">
       <img src="/static/sunset.jpg" alt="Sunset" style="display:block;margin:auto"   width="600" height="400">
+      <div class="icon">
+        <h3><i class="fa-regular fa-envelope icon-3x"></i></h3>
+      </div>
+        <a href="mailto:anqix2002@gmail.com"> <h4><i> anqix2002@gmail.com</a> </i>
+      </h4>
   </div>
   
   <div class="gallery">
       <img src="/static/snow.jpg" alt="Forest" width="600" height="400">
+      <div class="icon">
+        <h3><i class="fa-brands fa-github icon-3x"></i></h3>
+      </div>
+      <h4><i>
+        <a href="https://github.com/anqixxx"><h3><i><h4>anqixxx</a></i>
+
+      </h4>
   </div>
   
   <div class="gallery">
       <img src="/static/cherryblossoms.jpg" alt="Northern Lights" width="600" height="400">
+      <div class="icon">
+        <h3><i class="fa-brands fa-linkedin icon-3x"></i></h3>
+      </div>
+        <a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/"> <h4>Anqi Xu</a></i>
+      </h4>
   </div>
   <br>
   <br>
