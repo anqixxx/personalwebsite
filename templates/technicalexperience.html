@@ -2,21 +2,14 @@
 
 {% block content %}
 <style>
-    div.rocket {
-        color: white;
-        padding: 20px; 
-        margin: 25px;
-        background-color: var(--darkerblue);
-        animation-name: linetrans;
-        animation-duration: 2s;
-        border: 2px solid silver;
-        border-radius: 5px;
+    * {
+        box-sizing: border-box;
     }
-
-    div.bccr {
-        color: white;
-        padding: 20px; 
-        margin: 25px;
+    
+    div.techexp {
+        color: #ffffff;
+        /* padding: 20px; 
+        margin: 25px; */
         background-color: var(--darkerblue);
         animation-name: linetrans;
         animation-duration: 2s;
@@ -28,34 +21,131 @@
       font-style: italic;
     }
 
-    .grid-container {
+    /* .grid-container {
         display: grid;
         grid-template-columns: auto auto auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        animation-name: linetrans;
+        animation-duration: 2s;
+    } */
+
+    /* .grid-container img {
+        opacity: 0.8; 
+        cursor: pointer; 
+        width:70%; 
+        padding: 5%; 
+    }
+
+    .grid-container video{
+        opacity: 0.8; 
+        cursor: pointer; 
+        width:70%; 
+        padding: 5%; 
+    } */
+
+    .row{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+    }
+
+    .column img {
+        opacity: 0.8; 
+        cursor: pointer; 
+        width:100%; 
+        animation-name: imagefade;
+        animation-duration: 2s;
+    }
+
+    .column video {
+        opacity: 0.8; 
+        cursor: pointer; 
+        width:100%; 
+        top: 50%;
+    }
+
+    .column image:hover {
+        opacity: 1;
+    }
+
+    .column video:hover {
+        opacity: 1;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .container {
+        position: relative;
+        display: none;
+        width: 90%;
         padding: 20px;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color: var(--darkerblue);
+        font-size: 35px;
+        cursor: pointer;
     }
 
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
-    1% {background-color: white;}
+    1% {background-color: white; top: 100px;}
     69% {background-color: white;}
-	70% {transform: scale(1, .025);}
+	70% {transform: scale(1, .025); top: 0px;}
     95% {transform: scale(1, 1);}
     100% {background-color: var(--darkerblue);}
     }
+
+    @keyframes imagefade {
+        0% {transform: scale(0, .025); opacity: 0;}
+	    70% {transform: scale(1, .025);}
+        95% {transform: scale(1, 1); opacity: 0;}
+    }
 </style>
+
+<script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      expandImg.src = imgs.src;
+      expandImg.parentElement.style.display = "block";
+    }
+    </script>
 
 <title>Technical Experience</title>
 <h2> TECHNICAL EXPERIENCE </h2>
 
-<div class="bccr">
+<div class="techexp">
     <h3> <img src="static\bccancer.png" style="max-width: 20px; max-height: 20px;"> BC Cancer Research Co-op  </h3>
     <p class="italic"> January 2022 - April 2022     </p>
     <div class="silverline"></div>
-    <div class="grid-container">
-        <img src="static\bccrcircuit.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
-        <img src="static\bccrcmg.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
-        <img src="static\bccrpcb.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+    <div class="row">
+        <div class="column">
+        <img src="static\bccrcircuit.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        </div>
+        <div class="column">
+        <img src="static\bccrcmg.jpg" alt="UBC Image" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+        <img src="static\bccrpcb.jpg" alt="UBC Image" onclick="myFunction(this);">
+        </div>
     </div>
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
     <p class="big">
         Assisted in the development and training of a deep-learning algorithm to segment cell nuclei with an up to 98% accuracy rate
     <br>	       
@@ -71,12 +161,26 @@
 
 </div>
 
-<div class="rocket">
+<div class="techexp">
     <h3> <img src="static\ubcrocket.jpg" style="max-width: 20px; max-height: 20px;"> UBC Rocket — Aerostats Co-Lead  </h3>
     <p class="italic">September 2020 - Present     </p>
     <div class="silverline"></div>
-    <img src="static\aerostatsbox.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
-    <img src="static\aerostatscircuit.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
+    <div class="row">
+        <div class="column">
+        <img src="static\aerostatsbox.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        </div>
+        <div class="column">    
+        <img src="static\aerostatscircuit.jpg" alt="UBC Image" onclick="myFunction(this);">
+        </div>
+        <div class="column">    
+        <img src="static\aerostatbal.jpg" alt="UBC Image" onclick="myFunction(this);">
+        </div>
+    </div>
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
     <p class="big">
         Created and launched a meteorological balloon to test wind conditions up to 30km high to determine the suitability for rocket launches 
     <br>	       
@@ -92,17 +196,25 @@
 
 </div>
 
-<div class="rocket">
+<div class="techexp">
     <h3> <img src="static\ubcrocket.jpg" style="max-width: 20px; max-height: 20px;">  UBC Rocket —  Airframe and Internals  </h3>
     <p class="italic"> Febuary 2022 - Present     </p>
     <div class="silverline"></div>
-    <img src="static/ailoadcell.jpg" alt="UBC Image" style="max-width: 500px; padding-top: 10px; padding-bottom: 20px;"> 
-    <video max-width=auto height=auto
-    controls="controls"/> 
-      
-    <source src="static\rcstest.mp4" 
-        type="video/mp4"> 
-    </video> 
+    <div class="row">
+        <div class="column">
+        <img src="static/ailoadcell.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        </div>
+        <div class="column">
+        <video max-width=auto height=auto controls="controls"/> 
+        <source src="static\rcstest.mp4"
+        type="video/mp4"> </video> 
+        </div>
+    </div>
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
     <p class="big">
         Measured force and pressure within an RCS (Roll Control System) test stand using Labjack and Labview
         <br>
@@ -113,4 +225,5 @@
     <div class="silverline"></div>
 
 </div>
+
 {% endblock %}
