@@ -22,12 +22,16 @@
         --white: #ffffff; 
         --lightblue: rgb(196, 207, 242);
         --darkerblue: rgb(4, 8, 19);
+        --sonicsilver: silver;
+        --isabelline: #EDE6E3;
+        --gainsboro: #DADAD9;
+        --aliceblue: #DADAD9;
+        --richblack: #040F16;
     }
 
     
     hr {
         border:0;
-        border-top:1px solid #eee;
         margin:20px 0px;
         max-width: 1150px; 
         padding-left: 5px;        
@@ -42,9 +46,11 @@
         position: relative;
     }
 
+    
+
     body {  
-        background-color: var(--darkblue);
-        color: grey;
+        background-color: var(--isabelline);
+        color: var(--richblack);
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -91,7 +97,7 @@
         cursor: pointer;
         font-size: 20px;
         line-height: 1.8;
-        color: white;
+        color: var(--isabelline);
         text-decoration: none;
     }
 
@@ -99,7 +105,7 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
-      background-color: #fbfbfb;
+      background-color: var(--isabelline);
       position: fixed;
       top: 0;
       width: 200%;
@@ -111,7 +117,7 @@
 
     li a {
         display: block;
-        color: var(--darkblue);
+        color: var(--richblack);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -119,19 +125,23 @@
     }
 
     li a:hover {
-        background-color: var(--darkblue);
-        color: white;
+        background-color: white;
+        text-decoration: underline;
+        color: var(--richblack);
     }
 
     /* The dropdown container */
     .dropdown {
         float: left;
         overflow: hidden;
+        box-shadow: none;
+        z-index: 10000 !important;
+
     }
 
     /* Dropdown button */
     .dropdown .dropbtn {
-        color: var(--darkblue);
+        color: var(--richblack);
         font-size: 20px !important;
         font-weight:400 !important;
         line-height: 1.8 !important;
@@ -143,26 +153,27 @@
         margin: 0; /* Important for vertical align on mobile phones */
     }
 
-    /* Add a black background color to navbar links on hover */
-    .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: var(--darkblue);
-        color: white;
+    .navbar a:hover, .dropdown:hover {
+        background-color: var(--isabelline);
+        text-decoration: underline;
+        color: var(--richblack);
     }
 
     /* Dropdown content (hidden by default) */
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: var(--isabelline);
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-         z-index: 1;
+        z-index: 1;
+        float: left;
+        height: auto;
     }
 
     /* Links inside the dropdown */
     .dropdown-content a {
         float: none;
-        color: var(--darkblue);
+        color: var(--richblack);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -171,8 +182,7 @@
 
     /* Add a grey background color to dropdown links on hover */
     .dropdown-content a:hover {
-        background-color: var(--darkblue);
-        color: white;
+        background-color: white;
     }
 
     /* Show the dropdown menu on hover */
@@ -188,13 +198,13 @@
       justify-content: center;
       left: 50%;
       transform: translateX(-50%);
-      color: #fbfbfb;
+      color: var(--richblack);
     }
     
 
     #navbar{
-        z-index: 10000;
-        position: fixed;
+        z-index: 10000 !important;
+        /* position: fixed; */
         float: left;
         width: 100%;
         padding:0px;
@@ -217,7 +227,7 @@
     }
 
     .silverline {
-        border-top: 1px solid silver;
+        border-top: 1px solid var(--sonicsilver);
         max-width: 300px;
         left: 50%;
         position: relative;
@@ -225,11 +235,11 @@
         padding: 5px;
     }
     
-</style>
 
+</style>
  <!-- Starts Body > -->
-<body>
-<div id="navbar">   
+
+<div id="navbar">  
     <ul>
         <h5>
         <li><a href="http://127.0.0.1:5000/">HOME</a></li>
@@ -251,6 +261,8 @@
       </ul>
 </div>
 
+
+
 <span class="block"></span>
 
 {% block content %}{% endblock %}
@@ -264,6 +276,7 @@
 </h5>
 
 </div>
-  
+
+
 </body>
 </html>

@@ -7,12 +7,11 @@
     }
     
     div.techexp {
-        color: #ffffff;
-        /* padding: 20px; 
-        margin: 25px; */
-        background-color: var(--darkerblue);
-        animation-name: linetrans;
-        animation-duration: 2s;
+        /* // color: #ffffff; */
+        padding: 20px; 
+        margin: 25px;
+        /* animation-name: linetrans;
+        animation-duration: 4s; */
         border: 2px solid silver;
         border-radius: 5px;
     }
@@ -49,32 +48,34 @@
         padding-right: 10%;
     }
 
+    
     .column {
         float: left;
         width: 33.33%;
     }
 
     .column img {
-        opacity: 0.8; 
+        /*opacity: 0.7; */
         cursor: pointer; 
         width:100%; 
-        animation-name: imagefade;
-        animation-duration: 2s;
+/*        animation-name: imagefade;
+        animation-duration: 2s;*/
     }
 
     .column video {
-        opacity: 0.8; 
+        /*opacity: 0.7; */
         cursor: pointer; 
         width:100%; 
-        top: 50%;
+        position: relative; 
+        transform: translateY(50%);
     }
 
     .column image:hover {
-        opacity: 1;
+        /* opacity: 1; */
     }
 
     .column video:hover {
-        opacity: 1;
+        /* opacity: 1; */
     }
 
     .row:after {
@@ -83,12 +84,12 @@
         clear: both;
     }
 
-    .container {
+    /* .container {
         position: relative;
         display: none;
         width: 90%;
         padding: 20px;
-    }
+    } */
 
     .closebtn {
         position: absolute;
@@ -125,20 +126,20 @@
 
 <title>Technical Experience</title>
 <h2> TECHNICAL EXPERIENCE </h2>
-
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px">
 <div class="techexp">
     <h3> <img src="static\bccancer.png" style="max-width: 20px; max-height: 20px;"> BC Cancer Research Co-op  </h3>
     <p class="italic"> January 2022 - April 2022     </p>
     <div class="silverline"></div>
     <div class="row">
         <div class="column">
-        <img src="static\bccrcircuit.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        <img src="static\bccrcircuit.jpg" class="w3-image" style="display:block;margin:auto" alt="UBC Image" onclick="myFunction(this);"> 
         </div>
         <div class="column">
-        <img src="static\bccrcmg.jpg" alt="UBC Image" onclick="myFunction(this);">
+        <img src="static\bccrcmg.jpg"  class="w3-image" style="display:block;margin:auto" alt="UBC Image" onclick="myFunction(this);">
         </div>
         <div class="column">
-        <img src="static\bccrpcb.jpg" alt="UBC Image" onclick="myFunction(this);">
+        <img src="static\bccrpcb.jpg"  class="w3-image" style="display:block;margin:auto" alt="UBC Image" onclick="myFunction(this);">
         </div>
     </div>
     <div class="container">
@@ -167,13 +168,13 @@
     <div class="silverline"></div>
     <div class="row">
         <div class="column">
-        <img src="static\aerostatsbox.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        <img src="static\aerostatsbox.jpg" alt="UBC Image"  class="w3-image" style="display:block;margin:auto" onclick="myFunction(this);"> 
         </div>
         <div class="column">    
-        <img src="static\aerostatscircuit.jpg" alt="UBC Image" onclick="myFunction(this);">
+        <img src="static\aerostatscircuit.jpg" alt="UBC Image" class="w3-image" style="display:block;margin:auto" onclick="myFunction(this);">
         </div>
         <div class="column">    
-        <img src="static\aerostatbal.jpg" alt="UBC Image" onclick="myFunction(this);">
+        <img src="static\aerostatbal.jpg" alt="UBC Image" class="w3-image" style="display:block;margin:auto" onclick="myFunction(this);">
         </div>
     </div>
     <div class="container">
@@ -202,12 +203,15 @@
     <div class="silverline"></div>
     <div class="row">
         <div class="column">
-        <img src="static/ailoadcell.jpg" alt="UBC Image" onclick="myFunction(this);"> 
+        <img src="static/ailoadcell.jpg" alt="UBC Image" class="w3-image" style="display:block;margin:auto" onclick="myFunction(this);"> 
         </div>
         <div class="column">
         <video max-width=auto height=auto controls="controls"/> 
         <source src="static\rcstest.mp4"
         type="video/mp4"> </video> 
+        </div>
+        <div class="column">
+            <img src="static\aivalue.jpg" class="w3-image" style="display:block;margin:auto" alt="UBC Image" onclick="myFunction(this);"> 
         </div>
     </div>
     <div class="container">
@@ -225,5 +229,7 @@
     <div class="silverline"></div>
 
 </div>
+</div>
+
 
 {% endblock %}

@@ -24,7 +24,7 @@
     h3 {
         font-family: 'Playfair Display SC', serif;
         font-size: 30px;
-        line-height: 1.8;  
+        line-height: 1;  
         font-weight:400 !important;
     }
 
@@ -70,7 +70,7 @@
     .overlay a:hover{
         color: white; 
         text-decoration: none;
-
+        z-index: 1;
     }
 
     .overlay a:link{
@@ -87,7 +87,8 @@
         max-width: inherit;
         text-align: center;
         font-size: 20px;
-        color: var(--darkerblue);
+        color: var(--richblack);
+        z-index: 1;
     }
 
     .overlay {
@@ -111,15 +112,21 @@
 
     .gallery:hover .overlay {
          opacity: 1;
+         z-index: 1;
+    }
+
+    .image {
+      z-index: 1;
+      opacity: .4;
     }
 
 </style>
 
 <title>Contact</title>
 <h1>C O N T A C T&nbsp&nbsp&nbspM E</h1>
-<hr>
+<!-- <hr> -->
 
-<div class="a">
+<!-- <div class="a">
 
     <form action="" method="post">
         <p>
@@ -154,15 +161,17 @@
         </p>
     </form>
     
-    </div>
+    </div> -->
 
-<hr>
+<!-- <hr> -->
+<div class="w3-container w3-padding-32 w3-center">  
+
 <h3 > MORE WAYS TO GET IN TOUCH </h3>
 <br>
 <div class="row">
     <div class="gallery">
         <a href="mailto:anqix2002@gmail.com">
-        <img src="/static/sunset.jpg" alt="Sunset" style="display:block;margin:auto"   width="600" height="400">
+        <img src="/static/sunset.jpg" alt="Sunset" class="image" style="display:block;margin:auto"   width="600" height="400">
         <div class="icon"> <i class="fa-regular fa-envelope fa-10x"></i> </div>
         <div class="overlay"><a href="mailto:anqix2002@gmail.com"> E M A I L <br>anqix2002@gmail.com </a></div>
         </a>
@@ -170,7 +179,7 @@
   
   <div class="gallery">
     <a href="https://github.com/anqixxx">
-      <img src="/static/snow.jpg" alt="Forest" style="display:block;margin:auto"  width="600" height="400">
+      <img src="/static/snow.jpg" alt="Forest" class="image" style="display:block;margin:auto"  width="600" height="400">
       <div class="icon">
         <i class="fa-brands fa-github fa-10x"></i>
       </div>
@@ -180,7 +189,7 @@
   
   <div class="gallery">
     <a href="https://www.linkedin.com/in/anqi-xu-a60b191a9/">
-      <img src="/static/cherryblossoms.jpg" alt="Northern Lights" style="display:block;margin:auto"   width="600" height="400">
+      <img src="/static/cherryblossoms.jpg" class="image" alt="Northern Lights" style="display:block;margin:auto"   width="600" height="400">
       <div class="icon">
         <i class="fa-brands fa-linkedin fa-10x"> </i>
       </div>
@@ -191,5 +200,7 @@
 </div>
 
   <p> Feel free to directly email me, contact me on Github, or message me on LinkedIn!
+
+  </div>
 
 {% endblock %}

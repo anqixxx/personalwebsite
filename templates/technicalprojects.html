@@ -9,28 +9,26 @@
     }
 
     div.techproj {
-        color: white;
-        background-color: var(--darkerblue);
         padding: 20px; 
         margin: 25px;
         animation-name: linetrans;
-        animation-duration: 2s;
+        animation-duration: .7s;
         animation-timing-function: linear;
-        border: 2px solid silver;
+        border: 2px solid var(--sonicsilver);
         border-radius: 5px;
         position: relative;
     }
 
     div.program {
-        color: white;
+        /* color: white; */
     }
 
     div.elec {
-        color: white;
+        /* color: white; */
     }
 
     div.mech {
-        color: white;
+        /* color: white; */
     }
 
     p.italic {
@@ -43,60 +41,67 @@
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--isabelline);
    }
    
    #btn {
       border: none;
-      background-color: var(--darkerblue);
+      /* background-color: var(--darkerblue); */
       font-family: 'Playfair Display SC', serif;
-      color: grey;
       font-size: 18px;
       padding: 10px; 
       margin: 25px;
-      border: 2px solid grey;
+      border: 2px solid var(--richblack);
    }
 
    #programbtn {
       border: none;
-      background-color: var(--darkerblue);
+      /* background-color: var(--darkerblue); */
       font-family: 'Playfair Display SC', serif;
-      color: grey;
       font-size: 18px;
       padding: 10px; 
       margin: 25px;
-      border: 2px solid grey;
+      border: 2px solid var(--richblack);
    }
 
    #elecbtn {
       border: none;
-      background-color: var(--darkerblue);
+      /* background-color: var(--darkerblue); */
       font-family: 'Playfair Display SC', serif;
-      color: grey;
+      /* color: grey; */
       font-size: 18px;
       padding: 10px; 
       margin: 25px;
-      border: 2px solid grey;
+      border: 2px solid var(--richblack);
    }
 
    #mechbtn {
       border: none;
-      background-color: var(--darkerblue);
+      /* background-color: var(--darkerblue); */
       font-family: 'Playfair Display SC', serif;
-      color: grey;
+      /* color: grey; */
       font-size: 18px;
       padding: 10px; 
       margin: 25px;
-      border: 2px solid grey;
+      border: 2px solid var(--richblack);
    }
    
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
     1% {background-color: white; top: 100px;}
-    69% {background-color: white;}
-	70% {transform: scale(1, .025); top: 0px;}
+    39% {background-color: white;}
+	40% {transform: scale(1, .025); top: 0px;}
     95% {transform: scale(1, 1);}
-    100% {background-color: var(--darkerblue);}
+    100% {background-color: var(--isabelline);}
     }
+    
+    body > button:hover{
+        border: 2px solid white;
+        color: var(--isabelline);
+        background-color: var(--richblack);
+        z-index: 1;
+    }
+
 </style>
 
 <title>Technical Projects</title>
@@ -164,8 +169,23 @@ btn.addEventListener('click', () => {
 });
 
 </script>
-
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px">
 <div class="grid-container">
+    <div class="techproj program mech elec">
+        <h3 class="bold"> Autonomous Treasure Hunting Robot             </h3>
+        <p class="italic"> C++, Mechanical Design, Electrical Design       </p>
+        <p class="big">
+            Manufactured a fully autonomous robot that tape-follows, avoids bombs, and uses IR to detect, collect and store treasures
+            <br>
+            Integrated a control algorithm in C++ to communicate with ultrasonic sensors, reflectance sensors, and motors
+            <br>
+            Designed and manufactured a fully functioning claw capable of detecting, identifying, and retriving randomly located idols
+            <br>
+            Soldered PCBs for H-Bridges, magnetic detection circuits, reflectance circuits, and limit switches
+        </p>
+    </div>
+
+
     <div class="techproj program">
         <h3 class="bold"> Wikipedia Web-scraper </h3>
         <p class="italic">Java</p>
@@ -270,5 +290,6 @@ btn.addEventListener('click', () => {
     </div>
 </div>
 
+</div>
 
 {% endblock %}
