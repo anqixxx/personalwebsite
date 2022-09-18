@@ -55,7 +55,7 @@
     }
 
     .column img {
-        /*opacity: 0.7; */
+        opacity: 0.7;
         cursor: pointer; 
         width:100%; 
 /*        animation-name: imagefade;
@@ -63,7 +63,7 @@
     }
 
     .column video {
-        /*opacity: 0.7; */
+        opacity: 0.7;
         cursor: pointer; 
         width:100%; 
         position: relative; 
@@ -71,11 +71,11 @@
     }
 
     .column image:hover {
-        /* opacity: 1; */
+        opacity: 1;
     }
 
     .column video:hover {
-        /* opacity: 1; */
+        opacity: 1;
     }
 
     .row:after {
@@ -84,21 +84,51 @@
         clear: both;
     }
 
-    /* .container {
-        position: relative;
+    
+    .container {
+        position: absolute;
         display: none;
-        width: 90%;
-        padding: 20px;
-    } */
+        width: 100vw;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 9999;
+  /* position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center; */
+  /* background-color: black; */
+    }
 
     .closebtn {
         position: absolute;
-        top: 5%;
+        top: 10%;
         right: 5%;
-        color: var(--darkerblue);
+        color: var(--richblack);
         font-size: 35px;
         cursor: pointer;
+        z-index: 999999;
     }
+
+    #expandedImg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
     @keyframes linetrans {
 	0% {transform: scale(0, .025);}
@@ -114,7 +144,16 @@
 	    70% {transform: scale(1, .025);}
         95% {transform: scale(1, 1); opacity: 0;}
     }
+
+    
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 </style>
+
 
 <script>
     function myFunction(imgs) {
@@ -122,7 +161,7 @@
       expandImg.src = imgs.src;
       expandImg.parentElement.style.display = "block";
     }
-    </script>
+</script>
 
 <title>Technical Experience</title>
 <h2> TECHNICAL EXPERIENCE </h2>
@@ -144,7 +183,7 @@
     </div>
     <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:100%">
+        <img id="expandedImg">
         <div id="imgtext"></div>
       </div>
     <p class="big">
@@ -177,9 +216,10 @@
         <img src="static\aerostatbal.jpg" alt="UBC Image" class="w3-image" style="display:block;margin:auto" onclick="myFunction(this);">
         </div>
     </div>
+    
     <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:100%">
+        <img id="expandedImg">
         <div id="imgtext"></div>
       </div>
     <p class="big">
@@ -216,7 +256,7 @@
     </div>
     <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:100%">
+        <img id="expandedImg">
         <div id="imgtext"></div>
       </div>
     <p class="big">
@@ -230,6 +270,5 @@
 
 </div>
 </div>
-
 
 {% endblock %}
