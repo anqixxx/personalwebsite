@@ -1,9 +1,6 @@
 from flask import Flask, render_template, redirect, request
-from flask_mail import Mail, Message
-from forms import ContactForm
 import pandas as pd
 from datetime import datetime, timezone
-from csv import writer, DictWriter
 
 
 
