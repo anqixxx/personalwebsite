@@ -1,8 +1,5 @@
 from flask import Flask, render_template, redirect, request
-import pandas as pd
 from datetime import datetime, timezone
-
-
 
 app = Flask(__name__)
 
